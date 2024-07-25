@@ -15,8 +15,8 @@ The benchmark measures serialization and deserialization times for both approach
 
 As far as I can tell, you still have to precompile a `.desc` file in addition to having your `.proto` file. But pre-compiling the `.desc` file aside, dynamically loading arbitrary Protobufs in runtime is possible. The commands used were:
 
-To compile into a Java class: `protoc --java_out=. person.proto`
-To compile the `.desc` file: `protoc --include_imports --proto_path=. --descriptor_set_out=proto.desc person.proto`
+- To compile into a Java class: `protoc --java_out=. person.proto`
+- To compile the `.desc` file: `protoc --include_imports --proto_path=. --descriptor_set_out=proto.desc person.proto`
 
 ## Results
 

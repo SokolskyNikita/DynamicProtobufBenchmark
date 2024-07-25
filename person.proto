@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package example;
+
+option java_package = "org.example";
+option java_outer_classname = "PersonProto";
+
+message Person {
+  string name = 1;
+  int32 id = 2;
+  string email = 3;
+
+  enum PhoneType {
+    MOBILE = 0;
+    HOME = 1;
+    WORK = 2;
+  }
+
+  message PhoneNumber {
+    string number = 1;
+    PhoneType type = 2;
+  }
+
+  repeated PhoneNumber phones = 4;
+
+  message Address {
+    string street = 1;
+    string city = 2;
+    string country = 3;
+    string postal_code = 4;
+  }
+
+  Address address = 5;
+
+  int64 last_updated = 6;
+}
